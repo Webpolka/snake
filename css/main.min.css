@@ -5189,7 +5189,7 @@ body {
   top: 40%;
   left: 50%;
   width: 35vw;
-  height: 20rem;
+  height: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: all 0.5s ease-in-out;
   z-index: -100;
@@ -5197,27 +5197,34 @@ body {
   opacity: 0;
   background-color: transparent;
 }
+@media (max-width: 1600px) {
+  .popup {
+    width: 30%;
+    height: 38%;
+  }
+}
 @media (max-width: 1400px) {
   .popup {
-    width: 60%;
+    width: 45%;
+    height: 40%;
   }
 }
 @media (max-width: 768px) {
   .popup {
-    width: 80%;
-    height: 25rem;
+    width: 70%;
+    height: 25%;
   }
 }
 @media (max-width: 576px) {
   .popup {
     width: 80%;
-    height: 20rem;
+    height: 45%;
   }
 }
 @media (max-width: 320px) {
   .popup {
     width: 90%;
-    height: 20rem;
+    height: 30%;
   }
 }
 .popup.popup--show {
