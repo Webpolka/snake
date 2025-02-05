@@ -4900,13 +4900,20 @@ body {
   }
 }
 
+#game-touch {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: transparent;
+}
+
 #game-field {
   position: relative;
   width: 100%;
   min-width: 100%;
   min-height: calc(100vh - 6rem);
   background-position: center center;
-  /* x y */
   background-size: cover;
   background-repeat: no-repeat;
   border: 0px solid transparent;
@@ -5197,33 +5204,27 @@ body {
   opacity: 0;
   background-color: transparent;
 }
-@media (max-width: 1600px) {
+@media (min-width: 1201px) {
   .popup {
-    width: 30%;
-    height: 38%;
-  }
-}
-@media (max-width: 1400px) {
-  .popup {
-    width: 45%;
+    width: 20%;
     height: 40%;
   }
 }
 @media (max-width: 768px) {
   .popup {
-    width: 70%;
-    height: 25%;
+    width: 30%;
+    height: 33%;
   }
 }
 @media (max-width: 576px) {
   .popup {
-    width: 80%;
+    width: 60%;
     height: 45%;
   }
 }
 @media (max-width: 320px) {
   .popup {
-    width: 90%;
+    width: 70%;
     height: 30%;
   }
 }
@@ -5238,6 +5239,7 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  border: 4px solid rgb(31, 246, 3);
   box-shadow: 0 0 15px 1px #69c0fa;
 }
 .popup .popup-picture.start-picture {
@@ -5248,7 +5250,7 @@ body {
 }
 .popup .popup-picture.lost-picture {
   height: 100%;
-  background-image: url("../images/gameover.png");
+  background-image: url("../images/gameover.jpg");
   border-radius: 0.625rem;
 }
 .popup .popup-picture.level-picture {
@@ -5269,7 +5271,7 @@ body {
   height: 100%;
 }
 .popup .popup-picture ul.level-menu li {
-  color: white;
+  color: rgb(31, 246, 3);
   font-weight: bolder;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -5303,8 +5305,9 @@ body {
 }
 .popup .popup-picture .popup-center .score-count,
 .popup .popup-picture .popup-center .level-count {
-  color: rgb(0, 0, 128);
+  color: rgb(31, 246, 3);
   font-size: 3rem;
+  text-shadow: 0 0 4px rgb(0, 0, 0);
 }
 .popup .popup-picture .popup-center .score-icon {
   width: 3.125rem;
@@ -5350,11 +5353,12 @@ body {
 .popup .popup-buttons .popupBtn {
   text-align: center;
   width: 50%;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   background-color: rgb(0, 0, 128);
   border-radius: 10px;
-  color: white;
-  font-size: 1.5rem;
+  border: 4px solid rgb(31, 246, 3);
+  color: rgb(31, 246, 3);
+  font-size: 1.2rem;
   text-transform: uppercase;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 0 5px 1px #0099fd;
@@ -5365,7 +5369,12 @@ body {
 }
 @media (max-width: 768px) {
   .popup .popup-buttons .popupBtn {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 576px) {
+  .popup .popup-buttons .popupBtn {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=main.min.css.map */
